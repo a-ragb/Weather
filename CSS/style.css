@@ -1,0 +1,263 @@
+/*! ===========> Global Classes <=========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #bfc1c8;
+    font-family: "Roboto", serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    background: #1e202b;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*^ ===========> Navbar <=========== */
+.navbar {
+    padding-block: 50px;
+    .container-fluid {
+        .navbar-brand {    
+            .logo-img {
+                width: 64px;
+                height: 38px;
+                margin-right: 10px;
+            }
+            .logo-text {
+                .weather-title {
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+                .weather-text {
+                    color: #bfc1c8;
+                    font-size: 10px;
+                    line-height: 15px;
+                }
+            }
+        }
+        .navbar-toggler {
+            box-shadow: unset;
+            span {
+                color: white;
+                border: 2px solid transparent;
+                border-radius: 40px;
+                padding: 20px;
+                transition: 0.3s ease;
+                &:hover {
+                    border-color: #009ad8;
+                    color: #009ad8;
+                }
+            }
+        }
+        .navbar-collapse {
+            .navbar-nav {
+                margin-top: 30px;
+                padding-top: 15px;
+                background: #262936;
+                border-radius: 10px;
+                .nav-link {
+                    color: white;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+                .active-tab {
+                    color: #009ad8;
+                }
+            }
+        }
+    }
+}
+
+/*^ ===========> Header <=========== */
+.hero {
+    background-image: url('../Images/hero.png');
+    background-position: top left;
+    padding: 70px 0;
+    min-height: 350px;
+    .container {
+        .find-location {
+            position: relative;
+            input[type="text"] {
+                width: 100%;
+                padding: 20px 50px 20px 20px;
+                background: #1e202b;
+                color: white;
+                border-radius: 30px;
+                outline: 0;
+            }
+            input[type="button"] {
+                border: none;
+                background: #009ad8;
+                padding: 0px 40px;
+                border-radius: 30px;
+                color: white;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                bottom: 5px;
+            }
+        }
+    }
+}
+
+/*^ ===========> Forecast Table <=========== */
+.main-section {
+    .container {
+        .forecast-table {
+            width: 100%;
+            background: #323544;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: -150px;
+            margin-bottom: 50px;
+            .forecast-cell {
+                text-align: center;
+                &:nth-child(even) {
+                    background-color: #262936;
+                }
+                .cell-header {
+                    background: rgba(0, 0, 0, 0.1);
+                    padding: 10px;
+                    text-align: center;
+                    font-weight: 400;
+                    .date,.day {
+                        margin-bottom: unset;
+                    }
+                }
+                .cell-content {
+                    padding: 50px 20px 10px;
+                    .degree {
+                        .num {
+                            font-size: 24px;
+                            line-height: 36px;
+                            font-weight: 700;
+                            color: #FFF;
+                            text-align: center;
+                        }
+                    }
+                    small {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    .custom {
+                        color: #009ad8;
+                        margin: 20px 0;
+                    }
+                }
+            }
+            .today {
+                .cell-content {
+                    text-align: left;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    #location {
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 27px;
+                    }
+                    .degree {
+                        .num {
+                            text-align: left;
+                            margin-right: 30px;
+                            font-size: 90px;
+                            line-height: 135px;
+                        }
+                    }
+                    span {
+                        margin-right: 20px;
+                        .today-footer-icons {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*^ ===========> Footer <=========== */
+footer {
+    background: #262936;
+    padding: 50px 0;
+    .container {
+        .subscribe {
+            margin-bottom: 30px;
+            position: relative;
+            input[type="email"] {
+                width: 100%;
+                padding: 20px 100px 20px 20px;
+                background: #1e202b;
+                color: white;
+                border-radius: 30px;
+                outline: 0;
+            }
+            input[type="button"] {
+                border: none;
+                background: #009ad8;
+                padding: 10px 20px;
+                border-radius: 30px;
+                color: white;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                bottom: 5px;
+            }
+        }
+        .social-icons {
+            a {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: inline-block;
+                background: #1e202b;
+                color: #009ad8;
+                text-align: center;
+                transition: 0.3s ease;
+                font-size: 20px;
+                line-height: 2;
+                &:hover {
+                    background-color: #009ad8;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+/*^ ===========> Navbar Section Start <=========== */
+.navbar {
+    .container-lg {
+        .navbar-collapse {
+            .navbar-nav {
+                background-color: transparent;
+                .nav-link {
+                    padding: 5px 25px;
+                    border: 2px solid transparent;
+                    border-radius: 30px;
+                    transition: 0.3s ease;
+                    font-weight: 400;
+                    &:last-child {
+                        border-bottom: 2px solid transparent;
+                    }
+                    &:hover {
+                        border-color: #009ad8;
+                        color: #009ad8;
+                    }
+                }
+                .active-tab {
+                    border-color: #009ad8;
+                }
+            }
+        }
+    }
+}
+}
